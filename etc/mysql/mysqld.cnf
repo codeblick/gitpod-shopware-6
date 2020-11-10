@@ -9,7 +9,7 @@ tmpdir                 = /tmp
 bind-address           = 127.0.0.1
 
 key_buffer_size        = 16M
-max_allowed_packet     = 128MM
+max_allowed_packet     = 128M
 thread_stack           = 1M
 
 thread_cache_size      = 8
