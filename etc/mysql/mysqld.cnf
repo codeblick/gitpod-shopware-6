@@ -5,6 +5,8 @@ socket                 = /var/run/mysqld/mysqld.sock
 port                   = 3306
 datadir                = /workspace/shopware/etc/mysql/data
 
+connect_timeout        = 60
+
 tmpdir                 = /tmp
 bind-address           = 127.0.0.1
 
