@@ -1,7 +1,6 @@
 image:
   file: Dockerfile
 checkoutLocation: "shopware"
-workspaceLocation: "."
 ports:
   - port: 8000
     onOpen: open-preview
@@ -16,3 +15,11 @@ tasks:
         mysqld --initialize-insecure;
         mysqld &
         sleep 5;
+  - name: Shopware 6
+    command: >
+        cd $GITPOD_REPO_ROOT;
+        cd src;
+        composer install;
+        mkdir -p var/log;
+        mkdir -p var/cache;
+
