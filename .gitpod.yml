@@ -15,6 +15,7 @@ tasks:
         mysqld --initialize-insecure;
         mysqld &
         sleep 5;
+        echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'gitpod';" | mysql -uroot;
   - name: Shopware 6
     command: >
         cd $GITPOD_REPO_ROOT;

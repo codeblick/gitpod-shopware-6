@@ -14,6 +14,12 @@ You can find the logs in the projects folder `etc/apache2/logs`.
 
 The MySQL server is running on port 3306.
 
+### Credentials
+
+|Username|Password|
+|--------|--------|
+|root    |gitpod  |
+
 ### Logs
 
 You can find the logs in the projects folder `etc/mysql/logs`.
