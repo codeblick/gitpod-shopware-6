@@ -1,2 +1,11 @@
 image:
   file: Dockerfile
+ports:
+  - port: 8001
+    onOpen: open-preview
+  - port: 3306
+    onOpen: ignore
+tasks:
+  - name: Start apache
+    command: >
+        apachectl start;
