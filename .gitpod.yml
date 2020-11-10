@@ -44,3 +44,4 @@ tasks:
         export APP_URL=$(gp url 8000);
         sed -i -r "s|APP_URL=.+|APP_URL=$APP_URL|g" .env;
         bin/console assets:install;
+        echo "UPDATE shopware.sales_channel_domain SET url = '$APP_URL' WHERE url LIKE 'https://%';" | mysql -uroot -pgitpod;
