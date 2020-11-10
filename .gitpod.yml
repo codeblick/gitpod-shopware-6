@@ -15,7 +15,7 @@ tasks:
         mysqld --initialize-insecure;
         mysqld &
         sleep 5;
-        echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'gitpod';" | mysql -uroot;
+        echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'gitpod'; CREATE DATABASE shopware;" | mysql -uroot;
   - name: Shopware 6
     command: >
         cd $GITPOD_REPO_ROOT;
@@ -23,4 +23,21 @@ tasks:
         composer install;
         mkdir -p var/log;
         mkdir -p var/cache;
-
+        php public/recovery/install/index.php \
+          --no-interaction \
+          --db-user="root" \
+          --db-password="gitpod" \
+          --db-name="shopware" \
+          --shop-locale="de_DE" \
+          --shop-name="Demoshop" \
+          --shop-email="demo@codeblick.de" \
+          --shop-currency="EUR" \
+          --admin-username="admin" \
+          --admin-firstname="John" \
+          --admin-lastname="Doe" \
+          --admin-password="shopware" \
+          --admin-email="demo@codeblick.de" \
+          --admin-locale="de_DE";
+        sed -i -r 's/APP_ENV=.+/APP_ENV=dev/g' .env;
+        export APP_URL=$(gp url 8000);
+        sed -i -r "s|APP_URL=.+|APP_URL=$APP_URL|g" .env;
