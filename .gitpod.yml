@@ -1,5 +1,7 @@
 image:
   file: Dockerfile
+checkoutLocation: "shopware"
+workspaceLocation: "."
 ports:
   - port: 8001
     onOpen: open-preview
