@@ -8,6 +8,11 @@ ports:
   - port: 3306
     onOpen: ignore
 tasks:
-  - name: Start apache
+  - name: Start Apache
     command: >
         apachectl start;
+  - name: Start MySQL
+    command: >
+        mysqld --initialize-insecure;
+        mysqld &
+        sleep 5;

@@ -4,8 +4,8 @@ USER root
 
 ENV APACHE_DOCROOT_IN_REP=src/public
 ENV APACHE_LOG_DIR=/workspace/shopware/etc/apache2/logs
-RUN echo -e '\nexport APACHE_DOCROOT_IN_REP=src/public' >> /etc/apache2/envvars
-RUN echo -e '\nexport export APACHE_LOG_DIR=/workspace/shopware/etc/apache2/logs' >> /etc/apache2/envvars
+RUN echo -e '\nexport APACHE_DOCROOT_IN_REP=src/public\nexport APACHE_LOG_DIR=/workspace/shopware/etc/apache2/logs' >> /etc/apache2/envvars
+
 
 RUN apt-get update && \
     apt-get -y install \
