@@ -2,10 +2,7 @@ FROM gitpod/workspace-full
 
 USER root
 
-ENV APACHE_DOCROOT_IN_REP=src/public
-ENV APACHE_LOG_DIR=/workspace/shopware/etc/apache2/logs
-RUN echo -e '\nexport APACHE_DOCROOT_IN_REP=src/public\nexport APACHE_LOG_DIR=/workspace/shopware/etc/apache2/logs' >> /etc/apache2/envvars
-
+COPY etc/apache2/apache2.conf /etc/apache2/apache2.conf
 
 RUN apt-get update && \
     apt-get -y install \

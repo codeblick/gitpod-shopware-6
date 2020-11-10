@@ -3,7 +3,7 @@ image:
 checkoutLocation: "shopware"
 workspaceLocation: "."
 ports:
-  - port: 8001
+  - port: 8000
     onOpen: open-preview
   - port: 3306
     onOpen: ignore
