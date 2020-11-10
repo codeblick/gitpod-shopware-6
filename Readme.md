@@ -4,6 +4,12 @@
 
 After starting the Gitpod instance wait shortly for composer to finish installation. Then you can reload the preview.
 
+## PHP
+
+### Logs
+
+You can find the logs in the projects folder `etc/php/logs`.
+
 ## Apache2
 
 The Apache server is running on port 8000.

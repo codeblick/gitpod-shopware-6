@@ -1,5 +1,7 @@
 <?php
 
+$_SERVER['HTTPS'] = '1';
+
 use Doctrine\DBAL\DBALException;
 use PackageVersions\Versions;
 use Shopware\Core\Framework\Adapter\Cache\CacheIdLoader;
