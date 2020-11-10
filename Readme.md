@@ -2,6 +2,8 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/codeblick/gitpod-shopware-6)
 
+After starting the Gitpod instance wait shortly for composer to finish installation. Then you can reload the preview.
+
 ## Apache2
 
 The Apache server is running on port 8000.
