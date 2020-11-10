@@ -1,5 +1,7 @@
 FROM gitpod/workspace-full
 
+USER root
+
 ENV APACHE_DOCROOT_IN_REP="src/public"
 ENV APACHE_LOG_DIR="/workspace/etc/apache/logs"
 
