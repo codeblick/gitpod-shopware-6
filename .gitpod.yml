@@ -20,7 +20,7 @@ tasks:
     command: >
         cd $GITPOD_REPO_ROOT;
         cd src;
-        composer install --no-scripts;
+        composer install;
         mkdir -p var/log;
         mkdir -p var/cache;
         php public/recovery/install/index.php \
