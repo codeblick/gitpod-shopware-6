@@ -12,4 +12,4 @@ export PORT
 
 bin/console feature:dump || true
 
-npm run --prefix vendor/shopware/administration/Resources/app/administration/ dev
+npm run --prefix vendor/shopware/administration/Resources/app/administration/ dev -- --public "$(gp url 3000 | sed 's+https://++'):443"

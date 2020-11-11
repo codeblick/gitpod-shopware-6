@@ -35,3 +35,11 @@ You can find the logs in the projects folder `etc/mysql/logs`.
 ### Adminer
 
 You can access the MySQL database via adminer, which is located at `/adminer.php`.
+
+## Shopware
+
+### Admin credentials
+
+|Username|Password|
+|--------|--------|
+|admin   |shopware|
