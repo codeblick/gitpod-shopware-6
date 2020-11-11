@@ -18,7 +18,7 @@ tasks:
         echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'gitpod'; CREATE DATABASE shopware;" | mysql -uroot;
   - name: Shopware 6
     command: >
-        sleep 5;
+        sleep 10;
         cd $GITPOD_REPO_ROOT;
         cd src;
         composer install;
